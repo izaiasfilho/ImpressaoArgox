@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Prontuario" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4fb6c09f-1c55-458d-9c44-4e3671e045e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nome" class="java.lang.String"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="historico_familiar" class="java.lang.String"/>
+	<field name="exame_comple" class="java.lang.String"/>
+	<field name="exame_fisico" class="java.lang.String"/>
+	<field name="diagnostico" class="java.lang.String"/>
+	<field name="quadro_recebido" class="java.lang.String"/>
+	<field name="quadro_tratado" class="java.lang.String"/>
+	<field name="observacao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="154" splitType="Stretch">
+			<textField>
+				<reportElement x="83" y="110" width="323" height="20" uuid="8ef4a85a-3867-43c8-b8e6-2fa6616ba876"/>
+				<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="110" width="51" height="20" uuid="eac89229-c02f-4c37-b41a-ee2769bd0db6"/>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="131" width="51" height="20" uuid="54f790ae-b2db-42fa-a660-8918ef6e25a3"/>
+				<text><![CDATA[Idade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="131" width="53" height="20" uuid="92d8913e-864f-44df-8f3b-eb89f12babb3"/>
+				<text><![CDATA[Sexo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="90" width="51" height="20" uuid="d88dc3ea-842d-43d5-8c57-a5a610428faa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="0" width="181" height="28" uuid="b80f34f2-0caf-4dcb-bb0c-e6f214755b3a"/>
+				<textElement>
+					<font fontName="Arial" size="24"/>
+				</textElement>
+				<text><![CDATA[Nome da Clinica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="32" width="83" height="20" uuid="20b41d04-a31e-4fa3-9c01-04fa4f3cc6ab"/>
+				<text><![CDATA[Razão Social:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="52" width="51" height="20" uuid="4024b01a-e6f5-4b12-be4d-0df4c11ca8d6"/>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="32" width="31" height="20" uuid="6259d536-93b5-4ea5-a3f3-347116b93f27"/>
+				<text><![CDATA[Cnpj:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="52" width="53" height="20" uuid="290babc7-8cc7-4175-93fc-f9bba2c775be"/>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="157" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="84" width="167" height="67" uuid="12565da4-4080-4b7b-9b0e-36855cf10ea2"/>
+				<textFieldExpression><![CDATA[$F{historico_familiar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="85" width="169" height="66" uuid="664d221e-67b3-4068-bc3c-20d0c2231d91"/>
+				<textFieldExpression><![CDATA[$F{exame_comple}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="85" width="188" height="66" uuid="4e0bae43-534b-49c5-b345-cf101ff217f1"/>
+				<textFieldExpression><![CDATA[$F{exame_fisico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="85" width="213" height="66" uuid="2ff5e8fe-24ba-4c7f-9024-dc7f6d931104"/>
+				<textFieldExpression><![CDATA[$F{diagnostico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="64" width="99" height="20" uuid="62923f10-a6b6-4e44-9456-3f613383eeec"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Historico Familiar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="65" width="119" height="20" uuid="0e3622e9-e4c5-4369-a047-8bf9f33c4739"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Exame Complementar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="65" width="68" height="20" uuid="2bff1068-25e3-4c02-8360-4e8be45efa28"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Exame Fisico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="65" width="63" height="20" uuid="c581b8b7-394c-406b-b22c-b927046f99a4"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Diagnostico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="84" width="800" height="1" uuid="fad1840a-49e3-4313-b874-c92ba701d939"/>
+			</line>
+			<staticText>
+				<reportElement x="16" y="39" width="83" height="22" uuid="0d753373-d585-44d4-a254-3edb7b49b225"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Anamnese:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="0" width="315" height="28" uuid="f3aa4dd3-03ea-44dd-a077-8d00d3394a3a"/>
+				<textElement>
+					<font fontName="Arial Black" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATORIO DOS PRONTUARIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="67" height="20" uuid="cf3a46a6-c7d4-4b59-9792-ed868459f9d0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="40" width="88" height="20" uuid="f66229fa-af08-43d0-8fbe-834513df431b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Quadro Recebido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="40" width="80" height="20" uuid="015d88ae-14c1-4c60-891e-e4b792279d4c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Quadro Tratado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="40" width="70" height="20" uuid="f858f3aa-8594-49cc-877d-f220e2716a47"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Observação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="0" width="83" height="22" uuid="04e30fed-8004-446a-b910-02274bb91752"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Evolução:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="60" width="800" height="1" uuid="05868a8e-fb81-4199-8ef4-7fdfd35115cb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="67" height="20" uuid="f2dff47c-23d0-49ed-9f6b-0c265f281de9"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="202" height="68" uuid="d47f6caf-3997-4079-85e7-87f4d75a71e4"/>
+				<textFieldExpression><![CDATA[$F{quadro_recebido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="230" height="68" uuid="c0f40f8f-a8cd-42c1-ac58-762700f3ba9c"/>
+				<textFieldExpression><![CDATA[$F{quadro_tratado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="0" width="259" height="68" uuid="180f6b67-b525-4495-8cfa-8118e954e98e"/>
+				<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="702" y="34" width="100" height="20" uuid="c1b0ec69-8d6d-4e8d-b9d0-9ad59dc82e78"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="390" y="34" width="100" height="20" uuid="77d33275-4c81-4000-8b7e-bb882c01517e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="322" y="34" width="68" height="20" uuid="3f7cb961-bb6f-44bd-834d-a2a5efdf5256"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[João Pessoa,]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="56" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AgendaStatus" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6488b3d-cc46-4ef3-899c-219dd43b862d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="status" class="java.lang.String"/>
+	<field name="nome_paciente" class="java.lang.String"/>
+	<field name="nome_medico" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="data_agendamento" class="java.lang.String"/>
+	<field name="hora" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="228" y="37" width="83" height="20" uuid="1d2322ff-1523-4026-9089-ba9ba5b1708d"/>
+				<text><![CDATA[Razão Social:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="58" width="51" height="20" uuid="8c72c40a-f194-4843-8e43-be995aebd2b4"/>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="0" width="181" height="28" uuid="f856b360-a3f8-4c0d-b9d4-7e5bf8f99fb7"/>
+				<textElement>
+					<font fontName="Arial" size="24"/>
+				</textElement>
+				<text><![CDATA[Nome da Clinica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="58" width="53" height="20" uuid="514c5987-69cb-4e98-b464-456d330f3df2"/>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="37" width="31" height="20" uuid="dc281179-1abb-4458-9f3d-626f3d64555b"/>
+				<text><![CDATA[Cnpj:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="0" width="403" height="27" uuid="e5c67ff3-e691-4ac1-b820-0fb6d762e90a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[RELATORIO DOS AGENDAMENTOS - STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="27" width="52" height="20" uuid="f8d3611e-e4cb-40e6-a2f6-d5a8836fa9d6"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="53" y="27" width="100" height="20" uuid="83e00960-a267-455c-b9ef-ff7f2196f1b7"/>
+				<textFieldExpression><![CDATA[$P{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="143" height="20" uuid="6a79b35f-6567-4dca-8c0b-be967d27ad4b"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nome Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="89" height="20" uuid="e7e5e5d8-6cf0-4645-a575-c73131745003"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="86" height="20" uuid="7a26d961-b5ac-496b-9ba0-e0cf63768e15"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="137" height="20" uuid="c2f15c0d-acbb-4d21-94bd-8c9d82a8d129"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="1" width="76" height="20" uuid="2514ae79-979a-4ae0-b50c-72e9c074e545"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="dfa43717-57b8-47bc-940c-92fb4dc089c3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="002fe048-3c1f-49bb-a20d-73a81ad14b43"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="144" height="20" uuid="56aa12c6-58a5-46dd-9573-670908be1f23"/>
+				<textFieldExpression><![CDATA[$F{nome_paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="0" width="89" height="20" uuid="67eb98c4-5fe6-498b-99ed-ed444cbababb"/>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="86" height="20" uuid="b923906f-ab33-4e77-a0a8-df10be4fff0b"/>
+				<textFieldExpression><![CDATA[$F{data_agendamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="137" height="20" uuid="6c17c5e6-4696-424b-81b2-fe315b037e3e"/>
+				<textFieldExpression><![CDATA[$F{nome_medico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="2" width="76" height="20" uuid="8fd04dc2-bc57-4a3a-b291-11e7327c361e"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="ba254f9b-901a-4a95-b5cd-5a1de792cb02"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="258" y="38" width="100" height="20" uuid="4ad29075-aff9-42e1-b11b-b477996ba5d2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="38" width="63" height="20" uuid="0644d5fb-0b32-460d-be42-a90e829c43e7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[João Pessoa,]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

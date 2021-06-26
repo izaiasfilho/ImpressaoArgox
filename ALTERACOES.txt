@@ -1,0 +1,9 @@
+
+
+property config
+
+foi adcionado
+
+*************************
+
+impressora=elgin
